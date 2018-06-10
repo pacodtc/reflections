@@ -1,19 +1,44 @@
 Lesson 1
 
+git --version
 git clone "url"
 git log
-git diff "commit_id1" "commit_id2"
-git checkout "commit_id"
+git diff "commitid1" "commitid2"
+git checkout "commitid or branchname"
+git config --global color.ui auto
+git config --global core.editor "texteditoralias"
+git config --global merge.conflictstyle diff3
 
 Lesson 2
 
 git init
 git add "filename"
 git rm --cached "filename"
+git reset "filename"
 git status
 git diff
 git diff --staged
 git commit
 git commit -m "Commit message"
+git reset --hard
 git branch
 git branch "newbranchname"
+git log --graph --oneline "branchname1" "branchname2" "branchname3" ...
+git checkout -b "newbranchname"
+git gc
+git merge "checkedoutbranch" "branchname2" "branchname3" ...
+git merge --abort
+git show "commitid"
+git branch -d "branchname"
+git config --global core.autocrlf true [windows only]
+git log -n "numberofcommits"
+
+Lesson 3
+
+External Source
+
+git filter-branch --env-filter 'if [ "$GIT_AUTHOR_EMAIL" = "incorrect@email" ]; then
+     GIT_AUTHOR_EMAIL=correct@email;
+     GIT_AUTHOR_NAME="Correct Name";
+     GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL;
+     GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"; fi' -- --all
