@@ -1,0 +1,19 @@
+Lesson 1
+
+git clone "url"
+git log
+git diff "commit_id1" "commit_id2"
+git checkout "commit_id"
+
+Lesson 2
+
+git init
+git add "filename"
+git rm --cached "filename"
+git status
+git diff
+git diff --staged
+git commit
+git commit -m "Commit message"
+git branch
+git branch "newbranchname"
