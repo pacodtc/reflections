@@ -35,8 +35,19 @@ git log -n "numberofcommits"
 
 Lesson 3
 
+git remote
+git remote -v
+git remote add "origin or remoterepositoryreferencename" "url"
+git push "origin or remoterepositoryreferencename" "branchname"
+git pull "origin or remoterepositoryreferencename" "branchname"
+GitHub's equivalent of git clone is the Fork feature
+git fetch "origin or remoterepositoryreferencename"
+git branch -a
+git config --system core.longpaths true [Windows only]
+
 External Source
 
+git remote update "origin or remoterepositoryreferencename" --prune
 git filter-branch --env-filter 'if [ "$GIT_AUTHOR_EMAIL" = "incorrect@email" ]; then
      GIT_AUTHOR_EMAIL=correct@email;
      GIT_AUTHOR_NAME="Correct Name";
