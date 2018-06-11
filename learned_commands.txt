@@ -48,6 +48,8 @@ git config --system core.longpaths true [Windows only]
 External Source
 
 git remote update "origin or remoterepositoryreferencename" --prune
+git config --list
+git branch "branchname" --set-upstream-to="origin or remoterepositoryreferencename"/"branchname"
 git filter-branch --env-filter 'if [ "$GIT_AUTHOR_EMAIL" = "incorrect@email" ]; then
      GIT_AUTHOR_EMAIL=correct@email;
      GIT_AUTHOR_NAME="Correct Name";
