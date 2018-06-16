@@ -1,0 +1,21 @@
+Lesson 1 - HTML Elements
+
+<!DOCTYPE HTML> => (Void tag) - Defines the document as an HTML type
+<html> </html> => Surrounds the entire HTML document
+<head> </head> => Contains metadata, JavaScript, CSS and other random stuff
+<title> </title> => Place title on top of the browser window
+<body> </body> => All the elements are contained in the body
+
+<NAME> contents </NAME> - An Element with an opening tag and a closing tag
+
+<b> </b> => Inline, Bold - Makes things bold
+<em> </em> => Inline, Emphasis - Makes things italics
+
+<TAG ATTR="value"> contents </TAG> - HTML attributes
+
+<a href="url"> </a> => Inline, Anchor - Makes a link to the specified URL
+<img src="url" alt="text"> => Inline, Image (Void tag) - Loads image from URL or displays text when the image does not load. No closing tag needed
+<br> => Inline, Break (Void tag) - Ends a line
+<p> </p> => Block, Paragraph - Creates an invisible box with height and width
+<span class="foo"> </span> => Inline, Span -
+<div class="bar"> </div> => Block, Div -
