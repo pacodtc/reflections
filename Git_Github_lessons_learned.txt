@@ -1,12 +1,48 @@
+Three of the most popular version control systems are:
+Git
+Subversion
+Mercurial
+
+There are two main types of version control system models:
+the centralized model - all users connect to a central, master repository
+the distributed model - each user has the entire repository on their computer
+
+A version control system (abbreviated as VCS) is a tool that manages different versions of source code. A source code manager (abbreviated as SCM) is another name for a version control system.
+
+The git reset command is used to erase commits:
+
+git reset <reference-to-commit>
+
+It can be used to:
+
+Move the HEAD and current branch pointer to the referenced commit
+
+Erase commits with the --hard flag
+Moves committed changes to the staging index with the --soft flag
+Unstages committed changes --mixed flag
+
+Typically, ancestry references are used to indicate previous commits. The ancestry references are:
+
+^ – indicates the parent commit
+~ – indicates the first parent commit
+
 Lesson 1
 
 git --version
 git clone "url"
+git clone "url" "newrepositoryname"
 git log
+git log --oneline
+git log --stat
+git log -p
+git log -w
 git diff "commitid1" "commitid2"
 git checkout "commitid or branchname"
 git config --global color.ui auto
 git config --global core.editor "texteditoralias"
+git config --global core.editor "subl -n -w"
+git config --global core.editor "atom --wait"
+git config --global core.editor "code --wait"
 git config --global merge.conflictstyle diff3
 
 Lesson 2
@@ -14,13 +50,20 @@ Lesson 2
 git init
 git add "filename"
 git rm --cached "filename"
-git reset "filename"
 git status
 git diff
 git diff --staged
 git commit
 git commit -m "Commit message"
+git commit --amend
+git reset "filename"
 git reset --hard
+git reset --hard HEAD^
+git reflog [only for 30 days]
+git revert "SHA-of-commit-to-revert"
+git tag
+git tag -a "newtagname"
+git tag -d "tagname"
 git branch
 git branch "newbranchname"
 git log --graph --oneline "branchname1" "branchname2" "branchname3" ...
@@ -30,6 +73,7 @@ git merge "checkedoutbranch" "branchname2" "branchname3" ...
 git merge --abort
 git show "commitid"
 git branch -d "branchname"
+git branch -D "branchname"
 git config --global core.autocrlf true [windows only]
 git log -n "numberofcommits"
 
@@ -40,10 +84,10 @@ git remote -v
 git remote add "origin or remoterepositoryreferencename" "url"
 git push "origin or remoterepositoryreferencename" "branchname"
 git pull "origin or remoterepositoryreferencename" "branchname"
-GitHub's equivalent of git clone is the Fork feature
 git fetch "origin or remoterepositoryreferencename"
 git branch -a
 git config --system core.longpaths true [Windows only]
+GitHub's equivalent of git clone is the Fork feature
 
 External Source
 

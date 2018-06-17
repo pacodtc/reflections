@@ -17,5 +17,6 @@ Lesson 1 - HTML Elements
 <img src="url" alt="text"> => Inline, Image (Void tag) - Loads image from URL or displays text when the image does not load. No closing tag needed
 <br> => Inline, Break (Void tag) - Ends a line
 <p> </p> => Block, Paragraph - Creates an invisible box with height and width
-<span class="foo"> </span> => Inline, Span -
-<div class="bar"> </div> => Block, Div -
+<span class="foo"> </span> => Inline, Span - Creates an inline container element
+<div class="bar"> </div> => Block, Div - Creates a box container element
+<h1> </h1> => Inline, Hearder - Defines the header style
